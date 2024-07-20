@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+            <li><a href="{{ url_for('post') }}">Post</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Welcome to My HyperNetwork</h1>
+        <p>This website is designed to provide safe interface for Social Media Users</p>
+        <p>Feel free to navigate through different sections using the navigation above.</p>
+    </div>
+    {% if tweets %}
+    <div class="tweet">
+        <h2>Your Feed</h2>
+        <ul>
+            {% for tweet in tweets %}
+            <li>
+                {{ tweet.content }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</body>
+</html>

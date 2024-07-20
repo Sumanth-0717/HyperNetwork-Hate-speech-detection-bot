@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+        </ul>
+    </nav>
+    <h1>Hate Speech Detector</h1>
+    <div class="form-container">
+        <form action="/post_tweet" method="post">
+            <label for="tweet">Enter Text:</label>
+            <textarea id="tweet" name="tweet" placeholder="Type text here..."></textarea>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+    {% if prediction %}
+    <div id="predictionResult" class="result-container">
+        <h3>Feedback</h3>
+        <p id="resultText">{{ prediction }}</p>
+    </div>
+    {% endif %}
+    {% if tweets %}
+    <div>
+        <h2>Your Feed</h2>
+        <ul>
+            {% for tweet in tweets %}
+            <li>
+                {{ tweet.content }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('post') }}">Post</a></li>
+        </ul>
+    </nav>
+    <h1>Hi There 👋</h1>
+    
+    {% if tweets %}
+    <div>
+        <ul>
+            {% for tweet in tweets %}
+            <li>{{ tweet.content }}</li>
+            <form action="{{ url_for('delete_tweet', tweet_id=tweet.id) }}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+            {% endfor %}
+        </ul>
+    </div>
+    {% else %}
+    <p>There's Nothing in Here, Wanna Post Something?</p>
+    <div class="post">
+        <a href="{{ url_for('post') }}">Post</a>
+    </div>
+    
+    {% endif %}
+</body>
+</html>

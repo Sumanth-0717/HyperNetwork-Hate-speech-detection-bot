@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f2f5;
+}
+
+nav {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #120101;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+nav ul li a:hover {
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label, .form-container textarea, .form-container button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-container textarea {
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width:fit-content;
+    text-align: left;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+li form {
+    display: inline;
+}
+
+li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+li button:hover {
+    background-color: #e53935;
+}
+
+.post a{
+    display: inline-block;
+    color: #f4eded;
+    background-color: #333;
+    border-radius: 10px;
+    text-align:left;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.post a:hover{
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    color: black;
+}
+
+.tweet{
+    text-align: center ;
+}
+
+.tweet ul {
+     
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.tweet li {
+
+    width: fit-content; 
+    max-width: 100%; 
+    
+}
